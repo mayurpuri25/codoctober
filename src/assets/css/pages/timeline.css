@@ -1,11 +1,11 @@
 
-.timeline-container{
-    /* background-image: url(https://previews.123rf.com/images/logvinyk/logvinyk1601/logvinyk160100041/49909807-signo-de-icono-de-graduaci%C3%B3n-patrones-sin-fisuras-con-textura-geom%C3%A9trica-.jpg); */
+/* .timeline-container{
+    background-image: url(https://previews.123rf.com/images/logvinyk/logvinyk1601/logvinyk160100041/49909807-signo-de-icono-de-graduaci%C3%B3n-patrones-sin-fisuras-con-textura-geom%C3%A9trica-.jpg);
     position: relative;
-    top: -50px;
-}
+    top: -10px;
+} */
 
-h1, h3{
+#heading{
     margin-top: 10px;
     text-align: center;
     font-weight: bolder;

@@ -23,80 +23,80 @@ function Timeline() {
         <div className="timeline-container">
 
         
-        <h1>Frontend Development</h1>
+        <h1 id="heading">Frontend Development</h1>
         <div className="main-container">
 		<div className="text-wrapper left">
 			<div className="content">
-				<h3>HTML</h3>
+				<h3 id="heading">HTML</h3>
                 <img className="imgsize" src={html} alt="html"/>
 			</div>
 		</div>
 		<div className="text-wrapper right">
 			<div className="content">
-				<h3>CSS</h3>
+				<h3 id="heading">CSS</h3>
 				<img className="imgsize" src={css} alt="css"/>
 			</div>
 		</div>
 		<div className="text-wrapper left">
 			<div className="content">
-				<h3>Bootstrap</h3>
+				<h3 id="heading">Bootstrap</h3>
 				<img className="imgsize" src={bootstrap} alt="bootstrap"/>
 			</div>
 		</div>
 		<div className="text-wrapper right">
 			<div className="content">
-				<h3>Javascript</h3>
+				<h3 id="heading" >Javascript</h3>
 				<img className="imgsize" src={javascript} alt="javascript"/>
 			</div>
 		</div>
         <div className="text-wrapper left">
 			<div className="content">
-				<h3>jQuery</h3>
+				<h3 id="heading">jQuery</h3>
 				<img className="imgsize" src={jquery} alt="jquery"/>
 			</div>
 		</div>
         <div className="text-wrapper right">
 			<div className="content">
-				<h3>React</h3>
+				<h3 id="heading">React</h3>
 				<img className="imgsize" src={reacti} alt=""/>
 			</div>
 		</div>
 	</div>
-        <h1>Backend Development</h1>
+        <h1 id="heading">Backend Development</h1>
         <div className="main-container">
 		<div className="text-wrapper left">
 			<div className="content">
-				<h3>Nodejs</h3>
+				<h3 id="heading">Nodejs</h3>
                 <a href="../pages/Auth/Html.js"><img className="imgsize" src={nodejs} alt="nodejs"/></a>
 			</div>
 		</div>
 		<div className="text-wrapper right">
 			<div className="content">
-				<h3>Expressjs</h3>
+				<h3 id="heading">Expressjs</h3>
 				<img className="imgsize" src={expressjs} alt="expressjs"/>
 			</div>
 		</div>
 		<div className="text-wrapper left">
 			<div className="content">
-				<h3>API</h3>
+				<h3 id="heading">API</h3>
 				<img className="imgsize" src={api} alt="api"/>
 			</div>
 		</div>
 		<div className="text-wrapper right">
 			<div className="content">
-				<h3>SQL</h3>
+				<h3 id="heading">SQL</h3>
 				<img className="imgsize" src={sql} alt="sql"/>
 			</div>
 		</div>
         <div className="text-wrapper left">
 			<div className="content">
-				<h3>MongoDB</h3>
+				<h3 id="heading">MongoDB</h3>
 				<img className="imgsize" src={mdb} alt="mongodb"/>
 			</div>
 		</div>
         <div className="text-wrapper right">
 			<div className="content">
-				<h3>Deploy</h3>
+				<h3 id="heading">Deploy</h3>
 				<img className="imgsize" src={dep} alt="deploy"/>
 			</div>
 		</div>
