@@ -32,7 +32,7 @@ export default function NavBar() {
 
   return (
     <>
-      <Navbar expand="sm" id="nav" style={background}>
+      <Navbar expand="md" id="nav" style={background}>
         <Container fluid="lg">
           <Navbar.Brand>
             <NavLink exact to="/">

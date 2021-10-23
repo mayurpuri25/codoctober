@@ -1,0 +1,49 @@
+/* web section */
+.webcontainer{
+    border: 1px solid black;
+    background-color: #e5c39d;
+    border-radius: 5px;
+}
+/* .webrow{
+
+} */
+.w-30{
+    text-align: center;
+    max-width: 30%;
+}
+#webimg{
+    max-width:-webkit-fill-available;
+    border-radius: 5px;
+}
+#webhead{
+    max-width: fit-content;
+}
+
+.available{
+    background-color: rgb(197, 27, 27);
+    color: white;
+    width: fit-content;
+    border-radius: 5px;
+    
+}
+.learnbtn{
+    background-color: rgb(19 113 164);
+}
+
+/* Other Courses */
+.othersection{
+    justify-content: space-between;
+}
+
+#other{
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5c39d;
+    border: 1px solid black;
+    text-align: center;
+    max-width: 30%;
+    height: 150px;
+    border-radius: 5px;
+}

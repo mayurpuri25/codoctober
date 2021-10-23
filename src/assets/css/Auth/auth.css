@@ -38,7 +38,7 @@ background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   padding-right: 0;
 }
 
-.left {
+.leftauth {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -46,7 +46,7 @@ background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
   margin: 0;
 }
 
-.right {
+.rightauth {
   height: auto;
   width: 30%;
   background: url(https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/productimage/2020/11/18/7d512a34-8a7e-4b70-aebb-c64ff65dd7921605664025278-1.jpg)

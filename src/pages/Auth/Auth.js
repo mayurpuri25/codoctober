@@ -12,7 +12,7 @@ export default function Auth() {
       <div className="all p-5">
         <div className="flex-container p-1">
           <Row className="m-0">
-            <Row className="left px-4">
+            <Row className="leftauth px-4">
               <Col className="p-4">
                 <h1 id="header"className="text-center p-3">
                   Logo/Name
@@ -69,7 +69,7 @@ export default function Auth() {
                 </Row>
               </Col>
             </Row>
-            <Col className="right p-0"></Col>
+            <Col className="rightauth p-0"></Col>
           </Row>
         </div>
       </div>
