@@ -6,11 +6,13 @@ function Dashboard() {
   return (
     <>
       <section className="d-block w-100">
-        <img
-          className="banner"
+        <img className="banner"
           src="https://lighthouse-tc.com/wp-content/uploads/2020/08/e-learning-header-bg.jpg"
-          alt="banner"
-        />
+          alt="banner" />
+        <div className="writeup">
+          <h1>Investing in Knowledge and Your Future</h1>
+          <p>With the help of e-learning, create your own path and divide on your skills on your own to achieve what you seek</p>
+        </div>
       </section>
       <Catalog />
       {/* Catalog section */}

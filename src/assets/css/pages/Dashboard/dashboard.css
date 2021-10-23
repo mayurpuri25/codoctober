@@ -8,3 +8,77 @@
 .banner{
     width: inherit;
 }
+
+.writeup{
+    text-align: left;
+  position: absolute;
+  top: 130px;
+  left: 56px;
+  width: 40%;
+}
+h1{
+    font-size: 4.4rem;
+    font-weight: bolder;
+    color: #fff;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+    .writeup {
+        top: 100px;
+        left: 30px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .writeup {
+        top: 80px;
+        left: 30px;
+    }
+    h1{
+        font-size: 4.2rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    h1{
+        font-size: 3.2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 740px) {
+    h1{
+        font-size: 2.2rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 576px) {
+    .writeup {
+        top: 50px;
+        left: 20px;
+    }
+    h1{
+        font-size: 1.8rem;
+    }
+    p{
+        font-size: 0.5rem;
+    }
+}
+@media screen and (max-width: 440px) {
+    .writeup {
+        top: 40px;
+        left: 20px;
+    }
+    h1{
+        font-size: 1rem;
+    }
+}

@@ -19,12 +19,12 @@ function WebD() {
               <Col id="webhead">
                 <h2>Web Development</h2>
               </Col>
-              <Col className="pt-2">
-                <p className="available px-1">available</p>
+              <Col className="">
+                <p className="available px-2 py-1">available</p>
               </Col>
             </Row>
             <Row>
-              <Col>
+              <Col className="webtext">
                 <p>
                   Web Development is the practice of developing websites and web
                   apps that live on the internet. Whether you’re interested in
