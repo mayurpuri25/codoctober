@@ -38,11 +38,8 @@ a:-webkit-any-link {
   .linkContainer{
       display: flex;
       width: 100%;
-      justify-content:space-around;
-      font-size: x-large;
-      /* color: black; */
-      font-weight: bold
-      /* justify-content: flex-end; */
+      font-size: large;
+      justify-content: flex-end;
   }
 
   @media screen and (max-width: 575px) {

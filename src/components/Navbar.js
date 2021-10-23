@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import Logo from "../../Images/Rocket.svg";
 import { Container, Navbar, Nav } from "react-bootstrap";
-// import { div } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../assets/css/components/navbar.css";
 
 export default function NavBar() {
@@ -36,33 +35,35 @@ export default function NavBar() {
       <Navbar expand="sm" id="nav" style={background}>
         <Container fluid="lg">
           <Navbar.Brand>
-            <div >
-              <img
+            <NavLink exact to="/">
+            <img
                 // src={Logo}
                 alt="logo"
                 style={{ width: "50px", marginRight: "1rem" }}
               />
-            </div>
+            </NavLink>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="navhead py-2">
-            <Nav className="me-auto linkContainer ">
-              <div>
-                CATALOG
-              </div>
-              <div>
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto linkContainer">
+              <NavLink exact activeClassName="activeNavLinks" to="/">
+                HOME
+              </NavLink>
+              <NavLink exact activeClassName="activeNavLinks" to="/catalog">
+              CATALOG
+              </NavLink>
+              <NavLink exact activeClassName="activeNavLinks" to="/track">
                 TRACK
-              </div>
-              <div >
-                DISCUSSION
-              </div>
+              </NavLink>
+              <NavLink exact activeClassName="activeNavLinks" to="/discussion">
+              DISCUSSION
+              </NavLink>
+                <section>
+                    WELCOME, UserName
+                </section>
             </Nav>
           </Navbar.Collapse>
-
-          <section>
-              Welcome, UserName
-          </section>
         </Container>
       </Navbar>
     </>

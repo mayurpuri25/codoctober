@@ -1,6 +1,5 @@
 import React from "react";
 import "../assets/css/pages/Dashboard/dashboard.css";
-import NavBar from "../components/Navbar";
 // import { Container,Row,Col} from "react-bootstrap";
 import Catalog from "../components/Catalog";
 
@@ -9,7 +8,7 @@ import Catalog from "../components/Catalog";
 function Dashboard() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <section className="d-block w-100">
         <img
           className="banner"

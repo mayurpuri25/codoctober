@@ -13,9 +13,6 @@ function Catalog() {
         <Row>
             <Col><h3>Technology</h3></Col>
         </Row>
-        <Row>
-            {/* WebDev Course */}
-        </Row>
       </Container>
     </>
   );
