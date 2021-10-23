@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function WebD() {
   return (
     <>
-      <section className="webcontainer p-3" fluid>
+      <section className="webcontainer p-3">
         <Row className="webrow">
           <Col className="w-30">
             <Image
@@ -35,7 +35,7 @@ function WebD() {
             </Row>
             <Row>
               <Col>
-                <Link to="/webDevelopment">
+                <Link to="/webdevelopment">
                   <Button className="learnbtn">Learn More</Button>
                 </Link>
               </Col>
