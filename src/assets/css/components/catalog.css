@@ -4,12 +4,13 @@
     background-color: #e5c39d;
     border-radius: 5px;
 }
-/* .webrow{
-
-} */
+.webrow{
+    align-items: center
+}
 .w-30{
     text-align: center;
-    max-width: 30%;
+    max-width: 35%;
+
 }
 #webimg{
     max-width:-webkit-fill-available;
@@ -24,10 +25,14 @@
     color: white;
     width: fit-content;
     border-radius: 5px;
+    font-weight:bold;
     
 }
 .learnbtn{
     background-color: rgb(19 113 164);
+}
+.webtext{
+    font-size: larger;
 }
 
 /* Other Courses */
@@ -43,7 +48,17 @@
     background-color: #e5c39d;
     border: 1px solid black;
     text-align: center;
-    max-width: 30%;
+    max-width: 32%;
     height: 150px;
     border-radius: 5px;
+}
+
+@media screen and (max-width:742px) {
+    .webrow{
+        flex-direction: column;
+        height: 40%;
+    }
+    .w-30{
+        max-width:initial;
+    }
 }

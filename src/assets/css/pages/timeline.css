@@ -1,87 +1,154 @@
-
-.timeline-container{
-    /* background-image: url(https://previews.123rf.com/images/logvinyk/logvinyk1601/logvinyk160100041/49909807-signo-de-icono-de-graduaci%C3%B3n-patrones-sin-fisuras-con-textura-geom%C3%A9trica-.jpg); */
-    position: relative;
-    top: -50px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-h1, h3{
-    margin-top: 10px;
-    text-align: center;
-    font-weight: bolder;
-    color: blue;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
 }
 
-.main-container{
-	position: relative;
-    margin: auto;
-    width: 40%;
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  /* padding: 15px 0; */
+  padding-top: 70px;
 }
 
-.main-container::after{
-	content: '';
-	position: absolute;
-	width: 3px;
-	background-color: rgb(89, 79, 228);
-	top:0;
-	bottom: 0;
-	left: 50%;
-	margin-left: -3px;
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
 }
 
-.text-wrapper{
-	padding: 10px 40px;
-	position: relative;
-	width:50%;
-	box-sizing: border-box;
-	margin: 50px 0;
+.modules {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
 }
 
-.text-wrapper::after{
-	content: '';
-	position: absolute;
-    width: 15px;
-    height: 15px;
-	right: -5px;
-	background-color:#56f15e;
-	top:15px;
-	border-radius: 50%;
-	z-index: 1;
-    display: inline-block;
+.modules.left {
+  left: 0;
 }
 
-.content:hover{
-    transform: scale(1.06);
-    transition: .4s;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.modules.right {
+  left: 50%;
 }
 
-.left{
-	left: 0 ; 
+.modules::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
 }
 
-.right{
-	left:50% ;
+.modules.right::after {
+  left: -8px;
 }
 
-.right::after{
-	left:-10px;
+.modules::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006E51;
+  z-index: 1;
 }
 
-.content{
-    padding: 5px;
-	background-color: #db48c8;
-	border-radius: 10%;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+.modules.right::before {
+  left: 8px;
 }
 
-.content h3{
-    text-align: center;
+.modules .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
 }
 
-.imgsize{
+
+.modules .content {
+  padding: 30px 90px 30px 30px;
+  background: #F6D155;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.modules.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+.modules .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+}
+.modules .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .modules {
     width: 100%;
-    height: 130px;
-    border-radius: 10%;
-    padding: 0 10px 10px 5px;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .modules.right {
+    left: 0%;
+  }
+
+  .modules.left::after, 
+  .modules.right::after {
+    left: 82px;
+  }
+
+  .modules.left::before,
+  .modules.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .modules.left .date,
+  .modules.right .date {
+    right: auto;
+    left: 15px;
+  }
+  .modules.left .content,
+  .modules.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
 }
