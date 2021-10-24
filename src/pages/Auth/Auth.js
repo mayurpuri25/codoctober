@@ -24,6 +24,8 @@ export default function Auth() {
                 </h1>
 
                 <Row className="togglebtn">
+                  <Col className="text-center">
+                    
                   <ToggleButtonGroup
                     id="btngrp"
                     type="radio"
@@ -34,11 +36,12 @@ export default function Auth() {
                     <ToggleButton
                       style={{
                         // background: "#949390",
-                        background: "orange",
+                        background: "#55A7A0",
                         border: "none",
                         padding: "5px 5px",
                       }}
                       id="tbg-radio-1"
+                      className="px-3"
                       value={1}
                       onClick={()=>history.push("/")}
                       // onClick={() => setshow(true)}
@@ -48,7 +51,7 @@ export default function Auth() {
                     <ToggleButton
                       style={{
                         // background: "#aaa9a4",
-                         background: "orange",
+                         background: "#55A7A0",
                         border: "none",
                         padding: "5px 5px",
                       }}
@@ -61,6 +64,7 @@ export default function Auth() {
                       Sign Up
                     </ToggleButton>
                   </ToggleButtonGroup>
+                  </Col>
                 </Row>
                 <Row>
                 {/* <Login /> */}
