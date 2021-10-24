@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import "../assets/css/pages/track.css"
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import {addModule} from "../Redux/Slices/moduleSlice"
+import {useDispatch} from "react-redux"
+
 
 function TrackForm() {
     const [moduleName,setModuleName] = useState('');
     const [moduleDesc,setModuleDesc] = useState('');
 
+    const dispatch = useDispatch();
     const onSubmit = (e) =>{
         e.preventDefault();
 
@@ -16,6 +20,7 @@ function TrackForm() {
         console.log(NewModule);
         setModuleName('');
         setModuleDesc('');
+        dispatch(addModule(NewModule));
     }
     return (
         <div>
