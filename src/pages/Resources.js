@@ -6,6 +6,7 @@ import { useParams } from "react-router";
 
 function Resources() {
   const [resource, setResources] = useState([]);
+  const [reload, setReload] = useState(false);
   const params = useParams();
   const { moduleid, submoduleid } = params;
 
@@ -24,7 +25,7 @@ function Resources() {
       .then((res) => {
         setResources(res);
       });
-  }, [moduleid,submoduleid]);
+  }, [moduleid,submoduleid, reload]);
 
   return (
     <>
@@ -45,7 +46,7 @@ function Resources() {
         </Container>
       </div>
       <Container className="resourcecontainer my-5">
-        <ResourceForm />
+        <ResourceForm reload={reload} setReload={setReload} />
         <Row className="p-3">
           <Col>
             <h4>Added Resources</h4>

@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 function Track() {
   const [module, setModule] = useState([]);
   const history = useHistory();
-
+  const [reload, setReload] = useState(false);
+  
   useEffect(() => {
     fetch("http://pathtracker123.herokuapp.com/list-module/", {
       method: "GET",
@@ -20,13 +21,13 @@ function Track() {
       .then((res) => {
         setModule(res);
       });
-  }, []);
+  }, [reload]);
 
   return (
     <>
       <div className="trackbody">
         <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
-        <TrackForm />
+        <TrackForm reload={reload} setReload={setReload} />
         {/* TRACK FORM */}
         <section className="present-track">
           <Row>

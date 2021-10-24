@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router";
 
-function ResourceForm() {
+function ResourceForm({reload, setReload}) {
   const [resName, setResName] = useState("");
   const [resUrl, setResUrl] = useState("");
   const params = useParams();
@@ -33,6 +33,7 @@ function ResourceForm() {
 
     setResName("");
     setResUrl("");
+    setReload((prev)=>!prev);
   };
   return (
     <>

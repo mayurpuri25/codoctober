@@ -3,7 +3,7 @@ import "../assets/css/pages/track.css"
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 
 
-function TrackForm() {
+function TrackForm({reload, setReload}) {
     const [moduleName,setModuleName] = useState('');
     const [moduleDesc,setModuleDesc] = useState('');  
 
@@ -30,6 +30,8 @@ function TrackForm() {
 
         setModuleName('');
         setModuleDesc('');
+      setReload((prev)=>!prev);
+
     }
     return (
         <div>

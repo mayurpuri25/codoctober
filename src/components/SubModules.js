@@ -3,7 +3,7 @@ import "../assets/css/components/submodule.css";
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router";
 
-function SubModules() {
+function SubModules({ reload, setReload}) {
   const [subModName, setSubModName] = useState("");
   const [subModDesc, setSubModDesc] = useState("");
   const params = useParams();
@@ -30,6 +30,7 @@ function SubModules() {
       });
     setSubModName("");
     setSubModDesc("");
+    setReload((prev)=>!prev);
   };
   return (
     <div className="fixedsubform">
