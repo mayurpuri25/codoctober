@@ -16,7 +16,7 @@ const  Admin = ()=> {
                 <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/webDevelopment" component={Timeline} />
                 <Route exact path="/allnotes" component={AllNotes} />
-                <Route exact path="/webdevelopment" component={Timeline} />
+                <Route exact path="/timeline" component={Timeline} />
                 <Route exact path="/resources" component={Resources} />
                 <Route exact path="/track" component={Track} />
 
