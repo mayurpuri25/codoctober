@@ -1,12 +1,25 @@
-import React from "react";
-import { Container, Form, Button, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Form, Button, Row, Col } from "react-bootstrap";
 
 
 function ResourceForm() {
+  const [resName,setResName] = useState('');
+  const [resUrl,setResUrl] = useState('');
+
+  const onSubmit = (e) =>{
+    e.preventDefault();
+
+    const NewResource = {
+        name:resName,
+        url:resUrl
+    };
+    console.log(NewResource);
+    setResName('');
+    setResUrl('');
+}
   return (
     <>
-      {/* <Container className="trackform"> */}
-        <Form className="p-3">
+        <Form className="p-3" onSubmit={onSubmit}>
             <h3>Add Resources</h3>
           <Row className="resourcerform pt-3" style={{alignItems:"center"}}>
             <Col>
@@ -14,8 +27,8 @@ function ResourceForm() {
                 <Form.Label>Title</Form.Label>
                 <Form.Control
                   type="name"
-                //   value={moduleName}
-                //   onChange={(e) => setModuleName(e.target.value)}
+                  value={resName}
+                  onChange={(e) => setResName(e.target.value)}
                   placeholder="Enter Title"
                 />
               </Form.Group>
@@ -25,8 +38,8 @@ function ResourceForm() {
                 <Form.Label>URL</Form.Label>
                 <Form.Control
                   type="url"
-                //   value={moduleName}
-                //   onChange={(e) => setModuleName(e.target.value)}
+                  value={resUrl}
+                  onChange={(e) => setResUrl(e.target.value)}
                   placeholder="Enter URL"
                 />
               </Form.Group>
@@ -38,7 +51,6 @@ function ResourceForm() {
             </Col>
           </Row>
         </Form>
-      {/* </Container> */}
     </>
   );
 }
