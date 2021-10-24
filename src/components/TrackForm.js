@@ -33,20 +33,20 @@ function TrackForm() {
         <Form onSubmit={onSubmit}>
           <Form.Group className=" mb-3">
             <Form.Label>Track Name</Form.Label>
-            <Form.Control
+            <Form.Control className="inputbg"
               type="name"
                 value={moduleName}
                 onChange={(e) => setModuleName(e.target.value)}
-              placeholder="Enter Track Name"
+              placeholder="Enter Track Name" required
             />
           </Form.Group>
           <Form.Group className=" mb-3">
             <Form.Label>Description</Form.Label>
-            <Form.Control
+            <Form.Control className="inputbg"
               type="Description"
                 value={moduleDesc}
                 onChange={(e) => setModuleDesc(e.target.value)}
-              placeholder="Description"
+              placeholder="Description" required
             />
           </Form.Group>
           <Row>

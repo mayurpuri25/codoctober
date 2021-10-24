@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "../assets/css/pages/track.css";
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -13,13 +13,15 @@ function Track() {
 
   return (
     <>
-      <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
+    <div className="trackbody">
+      
+    <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
       <TrackForm />
       {/* TRACK FORM */}
       <section className="present-track">
         <Row>
           <Col>
-            <h2>Present Tracks</h2>
+            <h2 className="trackhead">Present Tracks</h2>
           </Col>
         </Row>
         <Row className="trackflex p-3" md={2} lg={3}>
@@ -28,7 +30,7 @@ function Track() {
                 <div className="trackcard p-3 mb-2" key={data.id}>
                   <Link to="/timeline">
               <Col className="text-center " >
-                <h3>{data?.name}</h3>
+                <h3 className="trackh">{data?.name}</h3>
                 </Col>
                 <Col >
                 <p >{data?.description}</p>
@@ -39,6 +41,7 @@ function Track() {
           })}
         </Row>
       </section>
+    </div>
     </>
   );
 }

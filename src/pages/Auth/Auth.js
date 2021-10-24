@@ -6,6 +6,7 @@ import { Switch } from 'react-router-dom';
 import { Route, Redirect } from 'react-router';
 import Login from "./Login";
 import SignUp from "./SignUp";
+import logo from "../../assets/images/logo.png"
 
 export default function Auth() {
   // const [show, setshow] = useState(true);
@@ -19,10 +20,12 @@ export default function Auth() {
             <Row className=" px-4">
               <Col className="p-4">
                 <h1 id="header"className="text-center p-3">
-                  Logo/Name
+                 <img className="loglogo" src={logo} alt="logo" />
                 </h1>
 
                 <Row className="togglebtn">
+                  <Col className="text-center">
+                    
                   <ToggleButtonGroup
                     id="btngrp"
                     type="radio"
@@ -32,11 +35,13 @@ export default function Auth() {
                   >
                     <ToggleButton
                       style={{
-                        background: "#949390",
+                        // background: "#949390",
+                        background: "#55A7A0",
                         border: "none",
-                        padding: "5px 25px",
+                        padding: "5px 5px",
                       }}
                       id="tbg-radio-1"
+                      className="px-3"
                       value={1}
                       onClick={()=>history.push("/")}
                       // onClick={() => setshow(true)}
@@ -45,9 +50,10 @@ export default function Auth() {
                     </ToggleButton>
                     <ToggleButton
                       style={{
-                        background: "#aaa9a4",
+                        // background: "#aaa9a4",
+                         background: "#55A7A0",
                         border: "none",
-                        padding: "5px 25px",
+                        padding: "5px 5px",
                       }}
                       id="tbg-radio-2"
                       value={2}
@@ -58,6 +64,7 @@ export default function Auth() {
                       Sign Up
                     </ToggleButton>
                   </ToggleButtonGroup>
+                  </Col>
                 </Row>
                 <Row>
                 {/* <Login /> */}
