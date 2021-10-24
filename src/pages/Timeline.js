@@ -5,6 +5,7 @@ import { useHistory, useParams } from "react-router";
 
 function Timeline() {
   const [subModule, setSubModule] = useState([]);
+  const[reload, setReload] = useState(false);
   const params = useParams();
   const history = useHistory();
   const { moduleid } = params;
@@ -21,7 +22,7 @@ function Timeline() {
       .then((res) => {
         setSubModule(res);
       });
-  }, [moduleid]);
+  }, [moduleid, reload]);
 
   return (
     <>
@@ -32,7 +33,7 @@ function Timeline() {
         <div className="cube"></div>
         <div className="cube"></div>
 
-        <SubModules />
+        <SubModules reload={reload} setReload={setReload} />
 
         {subModule?.map((mod) => {
           return (
