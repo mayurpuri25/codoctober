@@ -47,6 +47,17 @@
     border: 1px solid black; 
     background-color:#edf5ff ; 
 }
+.trackhead{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.trackh{
+    text-align: left;
+    font-weight: bold;
+}
+.trackcard:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
 
 @media screen and (max-width:584px) {
     .present-track{

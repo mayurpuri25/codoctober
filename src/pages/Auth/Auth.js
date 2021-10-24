@@ -6,6 +6,7 @@ import { Switch } from 'react-router-dom';
 import { Route, Redirect } from 'react-router';
 import Login from "./Login";
 import SignUp from "./SignUp";
+import logo from "../../assets/images/logo.png"
 
 export default function Auth() {
   // const [show, setshow] = useState(true);
@@ -19,7 +20,7 @@ export default function Auth() {
             <Row className=" px-4">
               <Col className="p-4">
                 <h1 id="header"className="text-center p-3">
-                  Logo/Name
+                 <img className="loglogo" src={logo} alt="logo" />
                 </h1>
 
                 <Row className="togglebtn">
@@ -32,9 +33,10 @@ export default function Auth() {
                   >
                     <ToggleButton
                       style={{
-                        background: "#949390",
+                        // background: "#949390",
+                        background: "orange",
                         border: "none",
-                        padding: "5px 25px",
+                        padding: "5px 5px",
                       }}
                       id="tbg-radio-1"
                       value={1}
@@ -45,9 +47,10 @@ export default function Auth() {
                     </ToggleButton>
                     <ToggleButton
                       style={{
-                        background: "#aaa9a4",
+                        // background: "#aaa9a4",
+                         background: "orange",
                         border: "none",
-                        padding: "5px 25px",
+                        padding: "5px 5px",
                       }}
                       id="tbg-radio-2"
                       value={2}
