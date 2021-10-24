@@ -12,13 +12,13 @@ const  Admin = ()=> {
         <>
         <NavBar />
             <Switch>
-                <Route exact path="/" component={Dashboard} />
+                <Route exact path="/dashboard" component={Dashboard} />
                 <Route exact path="/webDevelopment" component={Timeline} />
                 <Route exact path="/allnotes" component={AllNotes} />
                 <Route exact path="/webdevelopment" component={Timeline} />
                 <Route exact path="/resources" component={Resources} />
 
-                <Redirect from="*" to="/" />
+                <Redirect from="*" to="/dashboard" />
             </Switch>
         </>
     )

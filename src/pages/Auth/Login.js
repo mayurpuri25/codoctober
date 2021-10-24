@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import {useDispatch, useSelector} from "react-redux"
+import { setUser, selectUser } from "../../Redux/Slices/userSlice"
+import { useHistory } from "react-router";
+
 import "../../assets/css/Auth/login.css";
 
 function Login() {
@@ -7,11 +11,17 @@ function Login() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState(false);
   const [loading, setLoading] = useState(true);
+const history = useHistory()
+ const dispatch = useDispatch()
 
   useEffect(() => {
-    if (localStorage.getItem("token") !== null) {
-      window.location.replace("http://localhost:3000/");
-    } else {
+    if (localStorage.getItem("token") !== null && localStorage.getItem("username")) {
+      dispatch(setUser( localStorage.getItem("username")));
+    }
+    // else if(localStorage.getItem("username") === null){
+    //   history.push("/signup");
+    // }
+     else {
       setLoading(false);
     }
   }, []);
@@ -34,11 +44,10 @@ function Login() {
     })
       .then((res) => res.json())
       .then((data) => {
-      console.log(data)
+      console.log("loginData",data, data.token)           
         if (data.token) {
-          localStorage.clear();
           localStorage.setItem("token", data.token);
-          window.location.replace("http://localhost:3000/");
+          dispatch(setUser( localStorage.getItem("username")));
         } else {
           setEmail("");
           setPassword("");
