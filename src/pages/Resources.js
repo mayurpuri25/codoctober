@@ -1,28 +1,31 @@
 import React from 'react'
 import "../assets/css/pages/resources.css"
 import { Container,Col,Row,Button } from 'react-bootstrap'
+import {useSelector} from "react-redux"
+import {selectResources} from "../Redux/Slices/moduleSlice"
 import ResourceForm from '../components/ResourceForm'
 
 function Resources() {
-    const Resources = [
-            {
-              id: "1",
-              name: "gfg",
-              url:"https://www.javatpoint.com/git-merge-and-merge-conflict"
-            },
-            {
-                id: "2",
-                name: "youtube - CWH",
-                url:"https://www.javatpoint.com/git-merge-and-merge-conflict"            },
-            {
-                id: "3",
-                name: "blogs",
-                url:"https://www.javatpoint.com/git-merge-and-merge-conflict"            },
-            {
-                id: "4",
-                name: "CodeAcademy",
-                url:"https://www.javatpoint.com/git-merge-and-merge-conflict"            },
-          ];
+    const Resources = useSelector(selectResources);
+    // const Resources = [
+    //         {
+    //           id: "1",
+    //           name: "gfg",
+    //           url:"https://www.javatpoint.com/git-merge-and-merge-conflict"
+    //         },
+    //         {
+    //             id: "2",
+    //             name: "youtube - CWH",
+    //             url:"https://www.javatpoint.com/git-merge-and-merge-conflict"            },
+    //         {
+    //             id: "3",
+    //             name: "blogs",
+    //             url:"https://www.javatpoint.com/git-merge-and-merge-conflict"            },
+    //         {
+    //             id: "4",
+    //             name: "CodeAcademy",
+    //             url:"https://www.javatpoint.com/git-merge-and-merge-conflict"            },
+    //       ];
 
     return (
         <>

@@ -2,8 +2,12 @@ import React from "react";
 import "../assets/css/pages/timeline.css";
 import Module from "../utils/modules";
 import { Link } from "react-router-dom";
+import {useSelector} from "react-redux"
+import {selectSubModule} from "../Redux/Slices/moduleSlice"
 import SubModules from "../components/SubModules";
+
 function Timeline() {
+  const subModules = useSelector(selectSubModule)
   return (
     <>
       <div className="timeline">
@@ -15,7 +19,7 @@ function Timeline() {
 
         <SubModules />
 
-        {Module.map((mod) => {
+        {subModules.map((mod) => {
           return (
             <div
               className={
