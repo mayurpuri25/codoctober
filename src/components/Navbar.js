@@ -3,13 +3,14 @@ import { Container, Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { selectUser } from "../Redux/Slices/userSlice"
 import { useSelector} from "react-redux"
-
-
+import {useDispatch} from "react-redux"
+import { logout } from "../Redux/Slices/userSlice";
 import "../assets/css/components/navbar.css";
 import Logo from "../assets/images/logo.png"
 
 export default function NavBar() {
   const user = useSelector(selectUser)
+  const dispatch = useDispatch();
   console.log("user",user)
   const [background, setBackground] = useState({
     backgroundColor: "transparent",
@@ -53,7 +54,7 @@ export default function NavBar() {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto linkContainer">
+            <Nav className="linkContainer">
               <NavLink exact activeClassName="activeNavLinks" to="/">
                 HOME
               </NavLink>
@@ -66,8 +67,11 @@ export default function NavBar() {
               <NavLink exact activeClassName="activeNavLinks" to="/allnotes">
               Notes
               </NavLink>
-                <section>
-                    WELCOME, {user}
+                <section className="userInfo">
+                    Hi, {user}
+                    <i 
+                    onClick={()=>dispatch(logout())}
+                    class='bx bx-log-out'></i>
                 </section>
             </Nav>
           </Navbar.Collapse>
