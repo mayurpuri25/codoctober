@@ -31,18 +31,13 @@ function Resources() {
     <>
       <div className="bkg2 header bg-gradient-info pl-5 pt-5">
         <Container className="resourceshead">
-          {/* <Row>
+          <Row>
             <Col id="reshead">
-              <span style={{ fontSize: "60px" }}>JavaScript</span>
+              <span style={{ fontSize: "60px" }}>Resources</span>
             </Col>
           </Row>
           <Row>
-            <Col id="resdesc">
-              <p>
-                
-              </p>
-            </Col>
-          </Row> */}
+          </Row>
         </Container>
       </div>
       <Container className="resourcecontainer my-5">

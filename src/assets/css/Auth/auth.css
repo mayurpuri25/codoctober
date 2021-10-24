@@ -1,9 +1,11 @@
 .all {
   /* background: #c4c9ce; */
   /* background-image: url(https://i.pinimg.com/564x/31/e9/f7/31e9f725b1208147ac6265b7e0e1cf87.jpg); */
-  background-image: url("https://whmcsglobalservices.com/wp-content/uploads/2018/09/login-bg.jpg");
+  /* background-image: url("https://whmcsglobalservices.com/wp-content/uploads/2018/09/login-bg.jpg"); */
   background-repeat: no-repeat;
   min-height: 100vh;
+  background: linear-gradient(
+87deg,#11cdef,#1171ef)!important;
   /* background-size: 100%; */
   background-attachment: fixed;
   min-height: 100vh;
