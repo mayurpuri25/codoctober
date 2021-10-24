@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { selectUser } from "../Redux/Slices/userSlice"
+import { useSelector} from "react-redux"
+
+
 import "../assets/css/components/navbar.css";
 import Logo from "../assets/images/logo.png"
 
 export default function NavBar() {
+  const user = useSelector(selectUser)
+  console.log("user",user)
   const [background, setBackground] = useState({
     backgroundColor: "transparent",
     color: "white",
@@ -57,11 +63,11 @@ export default function NavBar() {
               <NavLink exact activeClassName="activeNavLinks" to="/track">
                 TRACK
               </NavLink>
-              <NavLink exact activeClassName="activeNavLinks" to="/discussion">
-              DISCUSSION
+              <NavLink exact activeClassName="activeNavLinks" to="/allnotes">
+              Notes
               </NavLink>
                 <section>
-                    WELCOME, UserName
+                    WELCOME, {user}
                 </section>
             </Nav>
           </Navbar.Collapse>

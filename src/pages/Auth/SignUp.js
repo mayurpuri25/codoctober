@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import {useDispatch, useSelector} from "react-redux"
+import { setUser, selectUser } from "../../Redux/Slices/userSlice"
+import { useHistory } from "react-router";
+
 import "../../assets/css/Auth/signup.css";
 
 export default function SignUp() {
@@ -8,10 +12,14 @@ export default function SignUp() {
   const [name,setName] = useState('');
   const [errors,setErrors] = useState(false);
   const [loading,setLoading] = useState(true);
+  const dispatch = useDispatch();
+const history = useHistory()
 
   useEffect(()=> {
     if (localStorage.getItem('token') !== null) {
-      window.location.replace('http://localhost:3000/');
+      // window.location.replace('http://localhost:3000/');
+      dispatch(setUser(localStorage.getItem("token")));
+
     } else {
       setLoading(false);
     }
@@ -37,10 +45,11 @@ export default function SignUp() {
     })
     .then(res => res.json())
     .then(data =>{
-      if(data.key){
+      console.log("data sign up",data);
+      if(data.name){
         localStorage.clear();
-      localStorage.setItem('token',data.key);
-      window.location.replace('http://localhost:3000/');
+        localStorage.setItem("username", data.name);
+        history.push("/login")
       }
       else{
         setEmail('');
