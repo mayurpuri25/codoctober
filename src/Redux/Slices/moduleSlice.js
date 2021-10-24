@@ -32,7 +32,7 @@ const moduleSlice = createSlice({
     }
 });
 
-export const { addModule } = moduleSlice.actions
+export const { addModule, addSubModule, addResources } = moduleSlice.actions
 export const selectModule = (state)=>state.module.modules.firstLevel.Modules;
 export const selectSubModule = (state)=>state.module.modules.firstLevel.secondLevel.SubModules;
 export const selectResources = (state)=>state.module.modules.firstLevel.secondLevel.thirdLevel.Resources;
