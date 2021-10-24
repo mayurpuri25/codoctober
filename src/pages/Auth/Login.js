@@ -59,7 +59,7 @@ const history = useHistory()
 
   return (
     <>
-      {errors === true && <h2>Cannot signup with provided credentials</h2>}
+      {errors === true && <h2>Cannot Login with provided credentials</h2>}
       {loading === false && (
         <Form className="BasicLogin pt-4" onSubmit={onSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">

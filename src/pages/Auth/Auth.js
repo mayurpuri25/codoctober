@@ -16,7 +16,7 @@ export default function Auth() {
       <div className="all p-5">
         <div className="flex-container p-1">
           <Row className="m-0">
-            <Row className="leftauth px-4">
+            <Row className=" px-4">
               <Col className="p-4">
                 <h1 id="header"className="text-center p-3">
                   Logo/Name
@@ -68,7 +68,7 @@ export default function Auth() {
                       </Switch>
                   {/* <Col className="">{show ? <Login /> : <SignUp />}</Col> */}
                 </Row>
-                <Row>
+                {/* <Row>
                   <Col>
                     <h3 id="or" className="pb-3">OR</h3>
                     <div className="google p-2">
@@ -79,10 +79,10 @@ export default function Auth() {
                       />CONTINUE WITH GOOGLE</span>
                     </div>
                   </Col>
-                </Row>
+                </Row> */}
               </Col>
             </Row>
-            <Col className="rightauth p-0"></Col>
+            {/* <Col className="rightauth p-0"></Col> */}
           </Row>
         </div>
       </div>

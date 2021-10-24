@@ -27,7 +27,7 @@ const history = useHistory()
   
   const onSubmit = e => {
     e.preventDefault();
-    
+
     const user = {
       name : name,
       email : email,
@@ -46,7 +46,7 @@ const history = useHistory()
     .then(res => res.json())
     .then(data =>{
       console.log("data sign up",data);
-      if(data.name){
+      if(data.name && name && email && password){
         localStorage.clear();
         localStorage.setItem("username", data.name);
         history.push("/login")
