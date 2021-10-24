@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "../assets/css/components/navbar.css";
+import Logo from "../assets/images/logo.png"
 
 export default function NavBar() {
   const [background, setBackground] = useState({
@@ -37,9 +38,9 @@ export default function NavBar() {
           <Navbar.Brand>
             <NavLink exact to="/">
             <img
-                // src={Logo}
+                src={Logo}
                 alt="logo"
-                style={{ width: "50px", marginRight: "1rem" }}
+                style={{ width: "60px", marginRight: "1rem" }}
               />
             </NavLink>
           </Navbar.Brand>
