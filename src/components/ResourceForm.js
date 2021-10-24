@@ -7,7 +7,8 @@ function ResourceForm() {
     <>
       {/* <Container className="trackform"> */}
         <Form className="p-3">
-          <Row style={{alignItems:"center"}}>
+            <h3>Add Resources</h3>
+          <Row className="resourcerform pt-3" style={{alignItems:"center"}}>
             <Col>
               <Form.Group className=" mb-3">
                 <Form.Label>Title</Form.Label>
