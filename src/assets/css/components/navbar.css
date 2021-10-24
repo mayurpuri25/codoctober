@@ -40,14 +40,37 @@ a:-webkit-any-link {
       width: 100%;
       font-size: large;
       justify-content: flex-end;
+      text-transform: uppercase;
+      align-items: baseline;
+  }
+  .bx.bx-log-out{
+      margin-left : 10px;
+      font-size: 25px;
+      cursor: pointer;
   }
 
   @media screen and (max-width: 767px) {
       .linkContainer{
-          justify-content: center;
+          width : 30%;
           align-items: center;
+          background-color : white;
+          color : black;
+          margin-left : auto;
+          border-radius : 5px;
+          padding : 5px 0;
       }
+      .userInfo{
+          padding-top: 10px;
+          border-top: 2px solid black;
+      }
+
       a{
           margin: 5px 0;
       }
   }
+
+  @media screen and (max-width : 500px) {
+    .linkContainer{
+        width: 40%;
+    }
+}
