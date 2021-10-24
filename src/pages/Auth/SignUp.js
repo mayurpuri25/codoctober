@@ -16,13 +16,13 @@ export default function SignUp() {
 const history = useHistory()
 
   useEffect(()=> {
-    if (localStorage.getItem('token') !== null) {
-      // window.location.replace('http://localhost:3000/');
-      dispatch(setUser(localStorage.getItem("token")));
+    // if (localStorage.getItem('token') !== null) {
+    //   // window.location.replace('http://localhost:3000/');
+    //   dispatch(setUser(localStorage.getItem("token")));
 
-    } else {
+    // } else {
       setLoading(false);
-    }
+    // }
   },[])
   
   const onSubmit = e => {
@@ -48,7 +48,6 @@ const history = useHistory()
       console.log("data sign up",data);
       if(data.name && name && email && password){
         localStorage.clear();
-        localStorage.setItem("username", data.name);
         history.push("/login")
       }
       else{
@@ -69,11 +68,13 @@ const history = useHistory()
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Full Name</Form.Label>
           <Form.Control type="name" value={name} placeholder="Enter your name"
+            required
             onChange={(e)=>setName(e.target.value)} />
         </Form.Group>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control type="email" value={email} placeholder="Enter email" 
+          required
           onChange={(e)=>setEmail(e.target.value)}/>
         </Form.Group>
 
@@ -81,6 +82,7 @@ const history = useHistory()
           <Form.Label>Create Password</Form.Label>
           <Form.Control type="password" value={password}
            placeholder="Enter your password" 
+           required
            onChange={(e)=>setPassword(e.target.value)}/>
         </Form.Group>
         <Button id="signbtn" type="submit">

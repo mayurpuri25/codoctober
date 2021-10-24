@@ -11,7 +11,7 @@ function App() {
   
   return (
     <>
-      {!user ? <Admin/> : <Auth/>}
+      {user ? <Admin/> : <Auth/>}
       
     </>
   );

@@ -15,4 +15,5 @@ const moduleSlice = createSlice({
 });
 
 export const { addModule } = moduleSlice.actions
+export const selectModule = (state)=>state.module.modules
 export default moduleSlice.reducer
