@@ -6,7 +6,13 @@
 87deg,#11cdef,#1171ef)!important;
 }
 
+.trackbody{
+    background-color: aliceblue;
+}
 /* TRACK FORM */
+.inputbg{
+    background-color: rgb(228, 222, 222);
+}
 .trackform{
     padding: 20px;
     border-radius: 5px;
@@ -15,7 +21,7 @@
     box-shadow: 0px 1px 2px black;
     border : 1px solid gray;
     max-width: 500px;
-    background-color: #edf5ff;
+    background-color: #fff;
 }
 #addtrack{
     height: 50px;
@@ -45,7 +51,20 @@
     max-height: 100%;
     border-radius: 5px;
     border: 1px solid black; 
-    background-color:#edf5ff ; 
+    background-color:#fff ; 
+}
+.trackhead{
+    font-weight: 500;
+    font-size: 2rem;
+}
+.trackh{
+    font-size: 1.4rem;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.trackcard:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px;
 }
 
 @media screen and (max-width:584px) {
