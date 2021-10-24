@@ -1,3 +1,52 @@
+# About Together Foundtion
+
+Web development has never been so complex and exciting as it is today. New tools, libraries, frameworks and plugins emerge every other day and there is so much to learn. It is imperative that newcomers to the web team are guided to embrace this evolution of the web application, learn to navigate the ecosystem with ease, and get productive in shipping code to our users as fast as possible. We have come up with a study guide to introduce why we do what we do, and how we handle front end at scale.
+
+We have made a self learning platform for those who were not able to access and afford the study materials offline. The name of our web application is Together Foundation. The site is responsive with best user experience.
+
+
+# SnapShots
+
+![unknown-6](https://user-images.githubusercontent.com/45273418/138615032-6e7972b4-6fa2-4388-a65b-0e14c5326aff.png)
+
+![unknown-7](https://user-images.githubusercontent.com/45273418/138615242-feb5aa79-6719-4c98-83a0-e02d70236953.png)
+
+![unknown-8 - Copy](https://user-images.githubusercontent.com/45273418/138615269-123f521b-097e-45d1-8445-9ce90d99ed8b.png)
+
+![unknown-9](https://user-images.githubusercontent.com/45273418/138615346-38ed7cdb-5d38-4fb5-887c-bb171c5fd094.png)
+
+# Technologies Used
+
+Frontend :-
+
+Html,
+Css,
+Javascript,
+Reactjs,
+Redux,
+React-Router,
+
+Backend :-
+
+Django Framework,
+Postgresql Database
+
+# Working
+
+First of all user is directed to Login/Signup page. Here user can first signup id he is a first comer and after signup he can login logout as per his convineince.
+After login user is directed to the dashboard where at the top there is navbar with hamburger menu.
+Below which there are some courses.
+Next in the hamburger there is catalog option and track option.
+In track option he can see timeline to courses. On clicking them he is directed to modules having documentation and links.
+There is add a new track option for user.
+Proper hovering and css animations have been used for development.
+React router has been used for single page application in associated with redux and APIs.
+Database like postgresql and django framework has been used for backend development.
+
+# Backend Repo
+
+https://github.com/rahulnegi20/backendTracker
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
