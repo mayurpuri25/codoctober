@@ -13,7 +13,6 @@
     color: inherit;
     margin-right: 5px;
 }
-
 .activeNavLinks{
     border-bottom: 3px solid crimson;
 }
@@ -42,7 +41,7 @@ a:-webkit-any-link {
       justify-content: flex-end;
   }
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 768px) {
       .linkContainer{
           justify-content: center;
           align-items: center;

@@ -17,6 +17,7 @@ export default function NavBar() {
     boxShadow: "none",
   });
 
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let nav = document.getElementById("nav");
