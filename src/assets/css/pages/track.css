@@ -1,0 +1,32 @@
+.bkg{
+    height: 300px;
+}
+.bg-gradient-info {
+    background: linear-gradient(
+87deg,#11cdef,#1171ef)!important;
+}
+
+/* TRACK FORM */
+.trackform{
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    top:-180px;
+    border : 1px solid gray;
+    width: 35%;
+    background-color: #edf5ff;
+}
+#loginbtn{
+    height: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    font-weight: bolder;
+    font-size:x-large;
+    
+}
+/* PRESENT TRACK */
+.present-track{
+    position: relative;
+    top:-180px;
+    padding: 50px;
+}
