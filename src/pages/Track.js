@@ -44,7 +44,7 @@ function Track() {
                   key={data.id}
                 >
                   <Col className="text-center ">
-                    <h3 className="trackh">{data?.name}</h3>
+                    <h3>{data?.title}</h3>
                   </Col>
                   <Col>
                     <p>{data?.description}</p>

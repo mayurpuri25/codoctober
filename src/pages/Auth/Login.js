@@ -27,7 +27,6 @@ function Login() {
       email: email,
       password: password,
     };
-    console.log(user);
 
     fetch("https://pathtracker123.herokuapp.com/token/", {
       method: "POST",
@@ -38,7 +37,6 @@ function Login() {
     })
       .then((res) => res.json())
       .then((data) => {
-      console.log("loginData",data, data.token)           
         if (data.token) {
           localStorage.setItem("token", data.token);
           localStorage.setItem("user", data.user_name);

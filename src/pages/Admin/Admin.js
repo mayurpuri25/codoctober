@@ -6,7 +6,7 @@ import Timeline from '../Timeline';
 import Resources from '../Resources';
 import Track from '../Track';
 import Dashboard from '../Dashboard';
-
+import Footer from '../../components/Footer';
 const  Admin = ()=> {
     return (
         <>
@@ -19,6 +19,7 @@ const  Admin = ()=> {
 
                 <Redirect from="*" to="/dashboard" />
             </Switch>
+         <Footer />   
         </>
     )
 }
