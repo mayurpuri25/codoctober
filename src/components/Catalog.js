@@ -1,43 +1,56 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../assets/css/components/catalog.css";
-import WebD from "./WebD";
+// import WebD from "./WebD";
 
 function Catalog() {
+  const cat = [
+    {
+      id: "1",
+      name: "python",
+    },
+    {
+      id: "2",
+      name: "dSA",
+    },
+    {
+      id: "3",
+      name: "AI",
+    },
+  ];
   return (
     <>
       <Container className="pt-3">
         <Row>
-          <Col className="text-center">
-            <h1>Catalog</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h3>Technology</h3>
+          <Col className="text-center p-2">
+            <h1>Latest Catalog</h1>
           </Col>
         </Row>
         <Row className="webrow">
           <Col>
-            <WebD />
+            {/* <WebD /> */}
             {/* Web Course Section*/}
           </Col>
         </Row>
-        <Row className="othersection p-3">
-          {/* <Col id="other">
-            <Image src="https://miro.medium.com/max/2000/1*9g2hSDNT3Cao2vh1HMO35A.jpeg" height="100px"></Image>
-          </Col> */}
+        <Container>
 
-          <Col id="other">
-            <h3>Learn DSA</h3>
-          </Col>
-          <Col id="other">
+
+        <Row className="othersection p-3" md={2} lg={3}>
+          {cat.map((data) => {
+            return (
+              <Col id="other" key={data.id}>
+                <h3>{data.name}</h3>
+              </Col>
+            );
+          })}
+          {/* <Col id="other">
             <h3>Learn Python</h3>
           </Col>
           <Col id="other">
             <h3>Learn AI</h3>
-          </Col>
+          </Col> */}
         </Row>
+        </Container>
       </Container>
     </>
   );
