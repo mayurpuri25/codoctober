@@ -10,7 +10,6 @@ import Logo from "../assets/images/logo.png"
 
 export default function NavBar() {
   const user = useSelector(selectUser)
-  console.log("user",user)
   const [background, setBackground] = useState({
     backgroundColor: "transparent",
     color: "white",

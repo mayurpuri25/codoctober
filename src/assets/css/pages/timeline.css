@@ -16,11 +16,18 @@ body {
   animation: Gradient 15s ease infinite;
   position: relative;
   width: 100%;
+  min-height: 100vh;
   /* max-width: 1140px; */
   margin: 0 auto;
   /* padding: 15px 0; */
   padding-top: 70px;
 }
+
+/* .stickysubform{
+  position: sticky;
+
+} */
+
 .cube {
 	position: absolute;
 	top: 80vh;

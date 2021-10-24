@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import {useDispatch, useSelector} from "react-redux"
-import { setUser, selectUser } from "../../Redux/Slices/userSlice"
-import { useHistory } from "react-router";
+import {useDispatch} from "react-redux"
+import { setUser } from "../../Redux/Slices/userSlice"
 
 import "../../assets/css/Auth/login.css";
 
@@ -11,20 +10,15 @@ function Login() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState(false);
   const [loading, setLoading] = useState(true);
-const history = useHistory()
  const dispatch = useDispatch()
 
   useEffect(() => {
-    if (localStorage.getItem("token") !== null && localStorage.getItem("username")) {
-      dispatch(setUser( localStorage.getItem("username")));
-    }
-    // else if(localStorage.getItem("username") === null){
-    //   history.push("/signup");
-    // }
-     else {
+    if(localStorage.getItem("token") && localStorage.getItem("user")){
+      dispatch(setUser(localStorage.getItem("user")));
+    }else{
       setLoading(false);
     }
-  }, []);
+    }, []);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -47,7 +41,8 @@ const history = useHistory()
       console.log("loginData",data, data.token)           
         if (data.token) {
           localStorage.setItem("token", data.token);
-          dispatch(setUser( localStorage.getItem("username")));
+          localStorage.setItem("user", data.user_name);
+          dispatch(setUser(data.user_name));
         } else {
           setEmail("");
           setPassword("");
@@ -59,7 +54,7 @@ const history = useHistory()
 
   return (
     <>
-      {errors === true && <h2>Cannot signup with provided credentials</h2>}
+      {errors === true && <h2>Cannot Login with provided credentials</h2>}
       {loading === false && (
         <Form className="BasicLogin pt-4" onSubmit={onSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -69,6 +64,7 @@ const history = useHistory()
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter email"
+              required
             />
           </Form.Group>
 
@@ -79,6 +75,7 @@ const history = useHistory()
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
+              required
             />
           </Form.Group>
 
