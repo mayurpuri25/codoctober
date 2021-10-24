@@ -20,7 +20,7 @@ function Catalog() {
   ];
   return (
     <>
-      <Container className="pt-3">
+      <Container className="pt-3" id="catalog">
         <Row>
           <Col className="text-center p-2">
             <h1>Latest Catalog</h1>
@@ -43,12 +43,6 @@ function Catalog() {
               </Col>
             );
           })}
-          {/* <Col id="other">
-            <h3>Learn Python</h3>
-          </Col>
-          <Col id="other">
-            <h3>Learn AI</h3>
-          </Col> */}
         </Row>
         </Container>
       </Container>

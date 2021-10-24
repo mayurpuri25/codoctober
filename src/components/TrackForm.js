@@ -1,26 +1,35 @@
 import React, { useState } from 'react';
 import "../assets/css/pages/track.css"
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
-import {addModule} from "../Redux/Slices/moduleSlice"
-import {useDispatch} from "react-redux"
 
 
 function TrackForm() {
     const [moduleName,setModuleName] = useState('');
-    const [moduleDesc,setModuleDesc] = useState('');
+    const [moduleDesc,setModuleDesc] = useState('');  
 
-    const dispatch = useDispatch();
     const onSubmit = (e) =>{
         e.preventDefault();
 
         const NewModule = {
-            name:moduleName,
-            description:moduleDesc
-        };
-        console.log(NewModule);
+          title:moduleName,
+          description:moduleDesc
+      };
+      
+        fetch("http://pathtracker123.herokuapp.com/create-module/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `token ${localStorage.getItem('token')}`
+        },
+        body: JSON.stringify(NewModule),
+      })
+        .then((res) => res.json())
+        .then((res) => {
+          
+        })
+
         setModuleName('');
         setModuleDesc('');
-        dispatch(addModule(NewModule));
     }
     return (
         <div>

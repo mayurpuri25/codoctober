@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/css/pages/timeline.css";
-import Module from "../utils/modules";
-import { Link } from "react-router-dom";
-import {useSelector} from "react-redux"
-import {selectSubModule} from "../Redux/Slices/moduleSlice"
 import SubModules from "../components/SubModules";
+import { useHistory, useParams } from "react-router";
 
 function Timeline() {
-  const subModules = useSelector(selectSubModule)
+  const [subModule, setSubModule] = useState([]);
+  const params = useParams();
+  const history = useHistory();
+  const { moduleid } = params;
+
+  useEffect(() => {
+    fetch(`http://pathtracker123.herokuapp.com/${moduleid}/list-submodule`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `token ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setSubModule(res);
+      });
+  }, [moduleid]);
+
   return (
     <>
       <div className="timeline">
@@ -19,23 +34,20 @@ function Timeline() {
 
         <SubModules />
 
-        {subModules.map((mod) => {
+        {subModule?.map((mod) => {
           return (
             <div
-              className={
-                mod.id%2 !== 0 ? "modules left" : "modules right"
-              }
+              className={mod.id % 2 !== 0 ? "modules left" : "modules right"}
               key={mod.id}
+              onClick={() => history.push(`/track/${moduleid}/${mod.id}`)}
             >
               <i className="icon fa fa-user"></i>
-              <Link to="/resources">
-                <div className="content">
-                  <h2 className="log">
-                    <p>{mod.module}</p>
-                  </h2>
-                  <p>{mod.content}</p>
-                </div>
-              </Link>
+              <div className="content">
+                <h2 className="log">
+                  <p>{mod.title}</p>
+                </h2>
+                <p>{mod.description}</p>
+              </div>
             </div>
           );
         })}

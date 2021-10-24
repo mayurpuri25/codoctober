@@ -11,7 +11,6 @@ import Logo from "../assets/images/logo.png"
 export default function NavBar() {
   const user = useSelector(selectUser)
   const dispatch = useDispatch();
-  console.log("user",user)
   const [background, setBackground] = useState({
     backgroundColor: "transparent",
     color: "white",
@@ -58,9 +57,6 @@ export default function NavBar() {
             <Nav className="linkContainer">
               <NavLink exact activeClassName="activeNavLinks" to="/">
                 HOME
-              </NavLink>
-              <NavLink exact activeClassName="activeNavLinks" to="/catalog">
-              CATALOG
               </NavLink>
               <NavLink exact activeClassName="activeNavLinks" to="/track">
                 TRACK

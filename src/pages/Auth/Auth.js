@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../assets/css/Auth/auth.css";
 import { ToggleButton, ToggleButtonGroup, Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router";
@@ -9,7 +9,6 @@ import SignUp from "./SignUp";
 import logo from "../../assets/images/logo.png"
 
 export default function Auth() {
-  // const [show, setshow] = useState(true);
   const history = useHistory();
 
   return (
