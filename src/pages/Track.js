@@ -1,47 +1,59 @@
-// import React, { useState } from "react";
 import "../assets/css/pages/track.css";
 import { Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router";
 import TrackForm from "../components/TrackForm";
-import {useSelector} from "react-redux"
-import {selectModule} from "../Redux/Slices/moduleSlice"
+import { useEffect, useState } from "react";
 
 function Track() {
+  const [module, setModule] = useState([]);
+  const history = useHistory();
 
-    const track = useSelector(selectModule)
-    console.log("redux modules",track, track.name,track.description)
+  useEffect(() => {
+    fetch("http://pathtracker123.herokuapp.com/list-module/", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `token ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setModule(res);
+      });
+  }, []);
 
   return (
     <>
-    <div className="trackbody">
-      
-    <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
-      <TrackForm />
-      {/* TRACK FORM */}
-      <section className="present-track">
-        <Row>
-          <Col>
-            <h2 className="trackhead">Present Tracks</h2>
-          </Col>
-        </Row>
-        <Row className="trackflex p-3" md={2} lg={3}>
-          {track.map((data) => {
-            return (
-                <div className="trackcard p-3 mb-2" key={data.id}>
-                  <Link to="/timeline">
-              <Col className="text-center " >
-                <h3 className="trackh">{data?.name}</h3>
-                </Col>
-                <Col >
-                <p >{data?.description}</p>
-              </Col>
-                  </Link>
+      <div className="trackbody">
+        <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
+        <TrackForm />
+        {/* TRACK FORM */}
+        <section className="present-track">
+          <Row>
+            <Col>
+              <h2 className="trackhead">Present Tracks</h2>
+            </Col>
+          </Row>
+          <Row className="trackflex p-3" md={2} lg={3}>
+            {module?.map((data) => {
+              return (
+                <div
+                  className="trackcard p-3 m-2"
+                  onClick={() => history.push(`/track/${data.id}`)}
+                  key={data.id}
+                >
+                  <Col className="text-center ">
+                    <h3 className="trackh">{data?.name}</h3>
+                  </Col>
+                  <Col>
+                    <p>{data?.description}</p>
+                  </Col>
                 </div>
-            );
-          })}
-        </Row>
-      </section>
-    </div>
+              );
+            })}
+          </Row>
+        </section>
+      </div>
     </>
   );
 }

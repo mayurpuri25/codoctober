@@ -13,9 +13,8 @@ const  Admin = ()=> {
         <NavBar />
             <Switch>
                 <Route exact path="/dashboard" component={Dashboard} />
-                <Route exact path="/webDevelopment" component={Timeline} />
-                <Route exact path="/timeline" component={Timeline} />
-                <Route exact path="/resources" component={Resources} />
+                <Route exact path="/track/:moduleid" component={Timeline} />
+                <Route exact path="/track/:moduleid/:submoduleid" component={Resources} />
                 <Route exact path="/track" component={Track} />
 
                 <Redirect from="*" to="/dashboard" />

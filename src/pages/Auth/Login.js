@@ -18,7 +18,7 @@ function Login() {
     }else{
       setLoading(false);
     }
-    }, []);
+    }, [dispatch]);
 
   const onSubmit = (e) => {
     e.preventDefault();
