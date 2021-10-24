@@ -64,9 +64,6 @@ export default function NavBar() {
               <NavLink exact activeClassName="activeNavLinks" to="/track">
                 TRACK
               </NavLink>
-              <NavLink exact activeClassName="activeNavLinks" to="/allnotes">
-              Notes
-              </NavLink>
                 <section className="userInfo">
                     Hi, {user}
                     <i 

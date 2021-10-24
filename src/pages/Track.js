@@ -48,13 +48,14 @@ function Track() {
           {track.map((data) => {
             return (
                 <div className="trackcard p-3 mb-2" key={data.id}>
-
+                  <Link to="/timeline">
               <Col className="text-center " >
                 <h3>{data?.name}</h3>
                 </Col>
                 <Col >
                 <p >{data?.description}</p>
               </Col>
+                  </Link>
                 </div>
             );
           })}
