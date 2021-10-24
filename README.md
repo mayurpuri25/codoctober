@@ -2,10 +2,14 @@
 
 Web development has never been so complex and exciting as it is today. New tools, libraries, frameworks and plugins emerge every other day and there is so much to learn. It is imperative that newcomers to the web team are guided to embrace this evolution of the web application, learn to navigate the ecosystem with ease, and get productive in shipping code to our users as fast as possible. We have come up with a study guide to introduce why we do what we do, and how we handle front end at scale.
 
-We have made a self learning platform for those who were not able to access and afford the study materials offline. The name of our web application is Together Foundation. The site is responsive with best user experience.
+We have made a self learning platform for those who were not able to access and afford the study materials offline. The name of our web app
+
+lication is Together Foundation. The site is responsive with best user experience.
 
 
 # SnapShots
+
+![Capture](https://user-images.githubusercontent.com/45273418/138616708-1df32f99-8794-4276-a2fd-95c533dc02be.JPG)
 
 ![unknown-6](https://user-images.githubusercontent.com/45273418/138615032-6e7972b4-6fa2-4388-a65b-0e14c5326aff.png)
 
