@@ -35,7 +35,9 @@ function Track() {
 
   return (
     <>
-      <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
+    <div className="trackbody">
+      
+    <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
       <TrackForm />
       {/* TRACK FORM */}
       <section className="present-track">
@@ -61,6 +63,7 @@ function Track() {
           })}
         </Row>
       </section>
+    </div>
     </>
   );
 }
