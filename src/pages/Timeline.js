@@ -34,10 +34,10 @@ function Timeline() {
 
         <SubModules />
 
-        {subModule?.map((mod) => {
+        {subModule?.map((mod,i) => {
           return (
             <div
-              className={mod.id % 2 !== 0 ? "modules left" : "modules right"}
+              className={i % 2 === 0 ? "modules left" : "modules right"}
               key={mod.id}
               onClick={() => history.push(`/track/${moduleid}/${mod.id}`)}
             >

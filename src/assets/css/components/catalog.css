@@ -1,5 +1,10 @@
 /* web section */
 /* #edf5ff */
+#catalog{
+    background-color: #f1f1f1;
+    max-width: 100%;
+    margin: 0;
+}
 .webcontainer{
     border: 1px solid black;
     background-color: white;
@@ -39,7 +44,7 @@
 
 /* Other Courses */
 .othersection{
-    justify-content: space-between;
+    justify-content:center;
     
     /* flex-wrap: wrap; */
 }
