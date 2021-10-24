@@ -37,6 +37,7 @@ function TrackForm() {
               type="name"
                 value={moduleName}
                 onChange={(e) => setModuleName(e.target.value)}
+                required
               placeholder="Enter Track Name"
             />
           </Form.Group>

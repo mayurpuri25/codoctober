@@ -29,3 +29,26 @@
     background-color: #117bef;
     border: 2px solid #117bef;
 }
+
+.redirectrow{
+    align-items: center;
+    border: 1px solid grey;
+    background-color: #ffffff;
+    border-radius: 20px;
+
+}
+
+.redirectbtncol{
+    font-weight: bold;
+    color: white;
+}
+
+.redirectbtn{
+    border-radius: 50%;
+}
+
+@media screen and (max-width:567px) {
+    .resourcerform{
+        flex-direction: column;
+    }
+}
