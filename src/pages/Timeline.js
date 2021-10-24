@@ -22,7 +22,7 @@ function Timeline() {
       .then((res) => {
         setSubModule(res);
       });
-  }, [moduleid, reload]);
+  }, [moduleid, !reload]);
 
   return (
     <>

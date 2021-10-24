@@ -25,7 +25,7 @@ function Resources() {
       .then((res) => {
         setResources(res);
       });
-  }, [moduleid,submoduleid, reload]);
+  }, [moduleid,submoduleid, !reload]);
 
   return (
     <>

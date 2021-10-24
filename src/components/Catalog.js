@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col,Button } from "react-bootstrap";
 import "../assets/css/components/catalog.css";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 function Catalog() {
   const [catalog, setCatalog] = useState([]);
@@ -32,12 +33,15 @@ function Catalog() {
         <Container>
           {catalog.length === 0?
           <Row className="my-auto d-block">
-            <Col className="notrack text-center p-3">
+            <Col className="notrack text-center p-3 mb-5">
             <h1 >
 
               No Track Added
             </h1>
+            <Link to="/track">
+            
             <Button className="addbtn">+</Button>
+            </Link>
 
             </Col>
           </Row>
