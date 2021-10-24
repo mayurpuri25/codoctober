@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../assets/css/pages/track.css"
 import { Container, Form, Button, Row, Col } from "react-bootstrap";
 
 function TrackForm() {
+    const [moduleName,setModuleName] = useState('');
+    const [moduleDesc,setModuleDesc] = useState('');
+
+    const onSubmit = (e) =>{
+        e.preventDefault();
+
+        const NewModule = {
+            name:moduleName,
+            description:moduleDesc
+        };
+        console.log(NewModule);
+        setModuleName('');
+        setModuleDesc('');
+    }
     return (
         <div>
             <Container className="trackform">
@@ -11,13 +25,13 @@ function TrackForm() {
             <h3>Add New Track</h3>
           </Col>
         </Row>
-        <Form className="">
+        <Form onSubmit={onSubmit}>
           <Form.Group className=" mb-3">
             <Form.Label>Track Name</Form.Label>
             <Form.Control
               type="name"
-              //   value={name}
-              //   onChange={(e) => set(e.target.value)}
+                value={moduleName}
+                onChange={(e) => setModuleName(e.target.value)}
               placeholder="Enter Track Name"
             />
           </Form.Group>
@@ -25,8 +39,8 @@ function TrackForm() {
             <Form.Label>Description</Form.Label>
             <Form.Control
               type="Description"
-              //   value={name}
-              //   onChange={(e) => set(e.target.value)}
+                value={moduleDesc}
+                onChange={(e) => setModuleDesc(e.target.value)}
               placeholder="Description"
             />
           </Form.Group>
