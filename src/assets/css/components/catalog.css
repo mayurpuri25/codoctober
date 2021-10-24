@@ -5,6 +5,17 @@
     max-width: 100%;
     margin: 0;
 }
+.notrack{
+    border: 2px dashed black;
+    height: 150px;
+    padding-top: 50px;
+}
+.addbtn{
+    border-radius: 50px;
+    font-size: x-large;
+    background-color: #1371a4;
+    border-color:#1371a4;
+}
 .webcontainer{
     border: 1px solid black;
     background-color: white;

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col,Button } from "react-bootstrap";
 import "../assets/css/components/catalog.css";
 import { useHistory } from "react-router";
 
 function Catalog() {
   const [catalog, setCatalog] = useState([]);
   const history = useHistory();
-
+  console.log(catalog.length)
   useEffect(() => {
     fetch("http://pathtracker123.herokuapp.com/list-module/", {
       method: "GET",
@@ -30,6 +30,18 @@ function Catalog() {
           </Col>
         </Row>
         <Container>
+          {catalog.length === 0?
+          <Row className="my-auto d-block">
+            <Col className="notrack text-center p-3">
+            <h1 >
+
+              No Track Added
+            </h1>
+            <Button className="addbtn">+</Button>
+
+            </Col>
+          </Row>
+          :
           <Row className="othersection p-3" md={2} lg={3}>
             {catalog
               ?.map((data) => {
@@ -46,7 +58,7 @@ function Catalog() {
                 );
               })
               .slice(0, 6)}
-          </Row>
+          </Row>}
         </Container>
       </Container>
     </>
