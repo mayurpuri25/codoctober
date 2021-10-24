@@ -12,15 +12,21 @@ function Track() {
         {
             id: "2",
             name: "dSA",
-            descrpiton:"Now it's time to go ahead and deploy your project. All the best!!!"
+            descrpiton:"Now it's timviergvervgouegoiuwrhgoiuhqiuugheriuvhiugh3uoie to go ahead and deploy your project. All the best!!!"
         },
         {
             id: "3",
+            name: "AIweoufwoiuhwiufh",
+            descrpiton:"Now it's time to go ahead and deploy your project. All the best!!!"
+        },
+        {
+            id: "4",
             name: "AI",
             descrpiton:"Now it's time to go ahead and deploy your project. All the best!!!"
         },
       ];
   return (
+
     <>
       <div className="bkg header bg-gradient-info pl-5 pt-5"></div>
       <TrackForm />
@@ -29,13 +35,18 @@ function Track() {
      <Row >
           <Col><h2>Present Tracks</h2></Col>
       </Row>
-      <Row className="p-3" md={2} lg={3}>
+      <Row className="trackflex p-3" md={2} lg={3}>
           {track.map((data) => {
             return (
-              <Col id="" key={data.id}>
+                <div className="trackcard p-3 mb-2" key={data.id}>
+
+              <Col className="text-center " >
                 <h3>{data.name}</h3>
-                <p>{data.descrpiton}</p>
+                </Col>
+                <Col >
+                <p >{data.descrpiton}</p>
               </Col>
+                </div>
             );
           })}
         </Row>

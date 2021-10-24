@@ -32,7 +32,7 @@ function TrackForm() {
           </Form.Group>
           <Row>
             <Col className="text-center">
-              <Button id="loginbtn" type="submit">
+              <Button id="addtrack" type="submit">
                 +
               </Button>
             </Col>
