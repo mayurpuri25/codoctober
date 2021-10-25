@@ -17,7 +17,7 @@ function SubModules({ reload, setReload}) {
       description: subModDesc,
     };
 
-    fetch(`http://pathtracker123.herokuapp.com/${moduleid}/create-submodule/`, {
+    fetch(`https://pathtracker123.herokuapp.com/${moduleid}/create-submodule/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

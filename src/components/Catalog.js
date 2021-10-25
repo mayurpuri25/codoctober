@@ -9,7 +9,7 @@ function Catalog() {
   const history = useHistory();
   console.log(catalog.length)
   useEffect(() => {
-    fetch("http://pathtracker123.herokuapp.com/list-module/", {
+    fetch("https://pathtracker123.herokuapp.com/list-module/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

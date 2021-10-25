@@ -1,5 +1,5 @@
 import "../assets/css/pages/track.css";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col} from "react-bootstrap";
 import { useHistory } from "react-router";
 import TrackForm from "../components/TrackForm";
 import { useEffect, useState } from "react";
@@ -10,7 +10,7 @@ function Track() {
   const [reload, setReload] = useState(false);
 
   useEffect(() => {
-    fetch("http://pathtracker123.herokuapp.com/list-module/", {
+    fetch("https://pathtracker123.herokuapp.com/list-module/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

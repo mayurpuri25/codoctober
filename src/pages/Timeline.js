@@ -11,7 +11,7 @@ function Timeline() {
   const { moduleid } = params;
 
   useEffect(() => {
-    fetch(`http://pathtracker123.herokuapp.com/${moduleid}/list-submodule`, {
+    fetch(`https://pathtracker123.herokuapp.com/${moduleid}/list-submodule`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

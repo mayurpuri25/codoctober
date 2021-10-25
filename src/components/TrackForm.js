@@ -15,7 +15,7 @@ function TrackForm({reload, setReload}) {
           description:moduleDesc
       };
       
-        fetch("http://pathtracker123.herokuapp.com/create-module/", {
+        fetch("https://pathtracker123.herokuapp.com/create-module/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

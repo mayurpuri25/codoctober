@@ -12,7 +12,7 @@ function Resources() {
 
   useEffect(() => {
     fetch(
-      `http://pathtracker123.herokuapp.com/${moduleid}/${submoduleid}/list-res/`,
+      `https://pathtracker123.herokuapp.com/${moduleid}/${submoduleid}/list-res/`,
       {
         method: "GET",
         headers: {

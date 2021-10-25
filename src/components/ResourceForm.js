@@ -17,7 +17,7 @@ function ResourceForm({reload, setReload}) {
     };
 
     fetch(
-      `http://pathtracker123.herokuapp.com/${moduleid}/${submoduleid}/create-res/`,
+      `https://pathtracker123.herokuapp.com/${moduleid}/${submoduleid}/create-res/`,
       {
         method: "POST",
         headers: {
