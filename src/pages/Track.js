@@ -21,7 +21,7 @@ function Track() {
       .then((res) => {
         setModule(res);
       });
-  }, [!reload]);
+  }, [reload]);
 
   return (
     <>
@@ -38,7 +38,7 @@ function Track() {
           {module.length === 0 ? (
             <Row className="my-auto d-block">
               <Col className="notrack text-center p-3 mb-5">
-                <h1>No Track Added</h1>
+                <h1 className="pt-4">No Track Added</h1>
               </Col>
             </Row>
           ) : (
@@ -54,7 +54,7 @@ function Track() {
                       <h3>{data?.title}</h3>
                     </Col>
                     <Col>
-                      <p>{data?.description}</p>
+                      <p style={{wordBreak:"break-word"}}>{data?.description}</p>
                     </Col>
                   </div>
                 );

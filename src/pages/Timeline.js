@@ -22,7 +22,7 @@ function Timeline() {
       .then((res) => {
         setSubModule(res);
       });
-  }, [moduleid, !reload]);
+  }, [moduleid,reload]);
 
   return (
     <>
@@ -33,7 +33,8 @@ function Timeline() {
         <div className="cube"></div>
         <div className="cube"></div>
 
-        <SubModules reload={reload} setReload={setReload} />
+
+<SubModules reload={reload}  setReload={setReload} />
 
         {subModule?.map((mod,i) => {
           return (

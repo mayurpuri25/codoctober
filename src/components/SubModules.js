@@ -7,6 +7,8 @@ function SubModules({ reload, setReload}) {
   const [subModName, setSubModName] = useState("");
   const [subModDesc, setSubModDesc] = useState("");
   const params = useParams();
+  const [disable,setDisable] = useState(true);
+
   const { moduleid } = params;
 
   const onSubmit = (e) => {
@@ -34,7 +36,12 @@ function SubModules({ reload, setReload}) {
   };
   return (
     <div className="fixedsubform">
+      {disable?<Button className="onform" onClick={()=>setDisable(false)}>+</Button>
+      :
       <Container className="subform">
+        <Row>
+          <Col className="text-end"><Button className="closeform mb-2"  onClick={()=>setDisable(true)}>x</Button></Col>
+        </Row>
         <Row>
           <Col className="text-center">
             <h3>Add Sub Track</h3>
@@ -48,7 +55,7 @@ function SubModules({ reload, setReload}) {
               id="subinput"
               value={subModName}
               onChange={(e) => setSubModName(e.target.value)}
-              placeholder="Enter Sub-Module Name"
+              placeholder="Enter Sub-Module"
             />
           </Form.Group>
           <Form.Group className=" mb-3">
@@ -69,7 +76,7 @@ function SubModules({ reload, setReload}) {
             </Col>
           </Row>
         </Form>
-      </Container>
+      </Container>}
     </div>
   );
 }

@@ -22,6 +22,11 @@
   padding-right: 0;
   background-color: aliceblue;
 }
+@media screen and (min-width:1240px) {
+  .flex-container{
+    margin-inline: 300px;
+  }
+}
 
 /* .leftauth {
   display: flex;
@@ -44,8 +49,16 @@
   margin-top: 47%;
   margin-left: 30%;
 }
+.authrow{justify-content: center;
+}
 .loglogo {
-  width: 10%;
+  width: 15%;
+}
+@media screen and (max-width:500px) {
+  .loglogo {
+    width: 40%;
+  }
+  
 }
 /* .google {
   text-align: center;
@@ -91,6 +104,7 @@
 
   .flex-container {
     display: block;
+    margin-inline: 5px;
   }
 
   .left {

@@ -66,6 +66,13 @@
 .trackcard:hover{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px;
 }
+@media screen and (max-width:580px) {
+    .trackflex{
+        justify-content: center;
+    }
+    
+
+}
 
 @media screen and (max-width:584px) {
     .present-track{

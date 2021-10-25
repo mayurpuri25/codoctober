@@ -65,7 +65,7 @@ export default function NavBar() {
                     Hi, {user}
                     <i 
                     onClick={()=>dispatch(logout())}
-                    class='bx bx-log-out'></i>
+                    className='bx bx-log-out'></i>
                 </section>
             </Nav>
           </Navbar.Collapse>

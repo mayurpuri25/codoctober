@@ -25,7 +25,7 @@ function Resources() {
       .then((res) => {
         setResources(res);
       });
-  }, [moduleid,submoduleid, !reload]);
+  }, [moduleid,submoduleid,reload]);
 
   return (
     <>
@@ -47,6 +47,13 @@ function Resources() {
             <h4>Added Resources</h4>
           </Col>
         </Row>
+        {resource.length === 0 ? (
+            <Row className="my-auto d-block m-5">
+              <Col className="notrack text-center p-3 mb-5">
+                <h1 className="pt-4">No Resources Added</h1>
+              </Col>
+            </Row>
+          ) :
         <Row className="p-3" sm={1} md={3} lg={4} xl={5}>
           {resource?.map((item) => {
             return (
@@ -60,7 +67,7 @@ function Resources() {
               </Row>
             );
           })}
-        </Row>
+        </Row>}
       </Container>
     </>
   );

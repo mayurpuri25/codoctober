@@ -12,6 +12,7 @@ body {
 
 .timeline {
   overflow-x: hidden;
+  overflow-y: hidden;
 	background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
   background-size: 400% 400%;
   animation: Gradient 15s ease infinite;
@@ -28,6 +29,37 @@ body {
   position: sticky;
 
 } */
+
+.onform{
+  border-radius: 50%;
+  /* font-weight: 700; */
+  background: #ffffff;
+  color: #491e9a;
+  border: 2px solid #f1f1f1;
+  font-weight: 700;
+  font-size: xx-large;
+    width: 60px;
+    aspect-ratio: 1/1;
+}
+.closeform{
+  border-radius: 5px;
+  background: #ffffff;
+  color: #491e9a;
+  border: 2px solid #f1f1f1;
+  font-weight: 700;
+}
+.onform:hover{
+  background-color: #F6D155;
+  border: #F6D155;
+  color: #491e9a;
+}
+
+.closeform:hover{
+  border: 2px solid #6f20b6;
+
+  background-color:#6f20b6;
+  color: #ffffff;
+}
 
 .cube {
 	position: absolute;

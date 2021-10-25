@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 function Catalog() {
   const [catalog, setCatalog] = useState([]);
   const history = useHistory();
-  console.log(catalog.length)
   useEffect(() => {
     fetch("https://pathtracker123.herokuapp.com/list-module/", {
       method: "GET",
@@ -24,7 +23,7 @@ function Catalog() {
 
   return (
     <>
-      <Container className="pt-3" id="catalog">
+      <Container className="py-3" id="catalog">
         <Row>
           <Col className="text-center p-2">
             <h1>Latest Catalog</h1>
@@ -47,7 +46,7 @@ function Catalog() {
           </Row>
           :
           <Row className="othersection p-3" md={2} lg={3}>
-            {catalog
+            {catalog.reverse()
               ?.map((data) => {
                 return (
                   <div

@@ -15,7 +15,7 @@ export default function Auth() {
     <>
       <div className="all p-5">
         <div className="flex-container p-1">
-          <Row className="m-0">
+          <Row className="authrow m-0 ">
             <Row className=" px-4">
               <Col className="p-4">
                 <h1 id="header"className="text-center p-3">
