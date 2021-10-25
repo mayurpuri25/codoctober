@@ -32,7 +32,7 @@ function SubModules({ reload, setReload}) {
       });
     setSubModName("");
     setSubModDesc("");
-    setReload(!reload);
+    setReload(prev=>!prev);
   };
   return (
     <div className="fixedsubform">

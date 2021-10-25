@@ -30,7 +30,7 @@ function TrackForm({reload, setReload}) {
 
         setModuleName('');
         setModuleDesc('');
-      setReload(!reload);
+      setReload(prev=>!prev);
 
     }
     return (

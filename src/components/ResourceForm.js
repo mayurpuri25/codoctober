@@ -33,7 +33,7 @@ function ResourceForm({reload, setReload}) {
 
     setResName("");
     setResUrl("");
-    setReload(!reload);
+    setReload(prev=>!prev);
   };
   return (
     <>

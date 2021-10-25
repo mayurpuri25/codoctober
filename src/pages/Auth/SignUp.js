@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useHistory } from "react-router";
 
@@ -9,14 +9,7 @@ export default function SignUp() {
   const [password,setPassword] = useState('');
   const [name,setName] = useState('');
   const [errors,setErrors] = useState(false);
-  const [loading,setLoading] = useState(true);
-const history = useHistory()
-
-  useEffect(()=> {
-
-      setLoading(false);
-
-  },[])
+  const history = useHistory()
   
   const onSubmit = e => {
     e.preventDefault();
