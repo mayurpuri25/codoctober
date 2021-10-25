@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/codoctober/static/css/main.41ed1ec6.chunk.css",
-    "main.js": "/codoctober/static/js/main.0e8cbaff.chunk.js",
-    "main.js.map": "/codoctober/static/js/main.0e8cbaff.chunk.js.map",
+    "main.js": "/codoctober/static/js/main.b57b534f.chunk.js",
+    "main.js.map": "/codoctober/static/js/main.b57b534f.chunk.js.map",
     "runtime-main.js": "/codoctober/static/js/runtime-main.52154f10.js",
     "runtime-main.js.map": "/codoctober/static/js/runtime-main.52154f10.js.map",
     "static/css/2.0a9ec390.chunk.css": "/codoctober/static/css/2.0a9ec390.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.0a9ec390.chunk.css",
     "static/js/2.26e85270.chunk.js",
     "static/css/main.41ed1ec6.chunk.css",
-    "static/js/main.0e8cbaff.chunk.js"
+    "static/js/main.b57b534f.chunk.js"
   ]
 }
