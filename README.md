@@ -2,10 +2,13 @@
 
 Web development has never been so complex and exciting as it is today. New tools, libraries, frameworks and plugins emerge every other day and there is so much to learn. It is imperative that newcomers to the web team are guided to embrace this evolution of the web application, learn to navigate the ecosystem with ease, and get productive in shipping code to our users as fast as possible. We have come up with a study guide to introduce why we do what we do, and how we handle front end at scale.
 
-We have made a self learning platform for those who were not able to access and afford the study materials offline. The name of our web app
+We have made a self learning platform for those who were not able to access and afford the study materials offline. The name of our web app location is Together Foundation. The site is responsive with best user experience.
 
-lication is Together Foundation. The site is responsive with best user experience.
+# Login Credentials
+User Id: manik@gmail.com
 
+
+User password: 12345
 
 # SnapShots
 
