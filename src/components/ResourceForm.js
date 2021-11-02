@@ -27,13 +27,12 @@ function ResourceForm({reload, setReload}) {
         body: JSON.stringify(NewResource),
       }
     )
-      .then((res) => res.json())
       .then((res) => {
+        setResName("");
+        setResUrl("");
+        setReload(prev=>!prev);
       });
 
-    setResName("");
-    setResUrl("");
-    setReload(prev=>!prev);
   };
   return (
     <>

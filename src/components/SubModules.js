@@ -27,12 +27,11 @@ function SubModules({ reload, setReload}) {
       },
       body: JSON.stringify(NewSubModule),
     })
-      .then((res) => res.json())
       .then((res) => {
+        setSubModName("");
+        setSubModDesc("");
+        setReload(prev=>!prev);
       });
-    setSubModName("");
-    setSubModDesc("");
-    setReload(prev=>!prev);
   };
   return (
     <div className="fixedsubform">

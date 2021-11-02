@@ -20,8 +20,11 @@ function Timeline() {
     })
       .then((res) => res.json())
       .then((res) => {
-        setSubModule(res);
-      });
+        if(res){
+          setSubModule(res);
+        }
+      }
+      ).catch(error=>console.log(error))
   }, [moduleid,reload]);
 
   return (

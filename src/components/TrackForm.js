@@ -23,15 +23,14 @@ function TrackForm({reload, setReload}) {
         },
         body: JSON.stringify(NewModule),
       })
-        .then((res) => res.json())
         .then((res) => {
           
+          setModuleName('');
+          setModuleDesc('');
+          setReload(prev=>!prev);
         })
 
-        setModuleName('');
-        setModuleDesc('');
-      setReload(prev=>!prev);
-
+        
     }
     return (
         <div>

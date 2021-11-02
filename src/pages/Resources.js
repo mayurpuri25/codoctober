@@ -23,8 +23,10 @@ function Resources() {
     )
       .then((res) => res.json())
       .then((res) => {
-        setResources(res);
-      });
+        if(res){
+          setResources(res);
+        }
+      }).catch(error=>console.log(error));
   }, [moduleid,submoduleid,reload]);
 
   return (

@@ -20,7 +20,6 @@ export default function SignUp() {
       password : password
 
     }
-    console.log(user);
 
     fetch('https://pathtracker123.herokuapp.com/create/',{
       method:'POST',

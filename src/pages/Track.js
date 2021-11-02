@@ -19,8 +19,11 @@ function Track() {
     })
       .then((res) => res.json())
       .then((res) => {
-        setModule(res);
-      });
+        if(res){
+
+          setModule(res);
+        }
+      }).catch(error=>console.log(error))
   }, [reload]);
 
   return (
